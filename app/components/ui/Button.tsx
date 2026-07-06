@@ -1,9 +1,14 @@
 type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
+  className?: string;
 };
 
-export default function Button({ children, variant = "primary" }: ButtonProps) {
+export default function Button({
+  children,
+  variant = "primary",
+  className = "",
+}: ButtonProps) {
   const baseStyles = "px-5 py-2 rounded-lg font-medium transition-colors";
 
   const variants = {
@@ -12,6 +17,8 @@ export default function Button({ children, variant = "primary" }: ButtonProps) {
   };
 
   return (
-    <button className={`${baseStyles} ${variants[variant]}`}>{children}</button>
+    <button className={`${baseStyles} ${variants[variant]} ${className}`}>
+      {children}
+    </button>
   );
 }
