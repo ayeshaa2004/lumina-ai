@@ -16,8 +16,8 @@ export default function CTA() {
               Learn faster, build confidently, and debug smarter with Lumina AI.
             </p>
 
-            <Button className="mt-10" variant="primary" >
-              Get Started Free
+            <Button className="mt-10" variant="primary">
+              Start Learning Now →{" "}
             </Button>
           </div>{" "}
         </div>
