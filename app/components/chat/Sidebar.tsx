@@ -18,11 +18,12 @@ export default function Sidebar() {
               + New Chat
             </button>
           </div>
-          <div className="flex-1 overflow-y-auto p-4">
-            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">
-              Recent Chats
-            </h3>
-          </div>
+        </div>
+        <div className="flex-1 overflow-y-auto p-4">
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            Recent Chats
+          </h3>
+
           <div className="space-y-2">
             {chats.map((chat) => (
               <button
@@ -33,16 +34,16 @@ export default function Sidebar() {
               </button>
             ))}
           </div>
-          <div className="border-t border-white/10 p-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 font-semibold text-white">
-                A
-              </div>
+        </div>
+        <div className="border-t border-white/10 p-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 font-semibold text-white">
+              A
+            </div>
 
-              <div>
-                <p className="font-medium text-white">Ayesha</p>
-                <p className="text-sm text-gray-400">AI Explorer</p>
-              </div>
+            <div>
+              <p className="font-medium text-white">Ayesha</p>
+              <p className="text-sm text-gray-400">AI Explorer</p>
             </div>
           </div>
         </div>
