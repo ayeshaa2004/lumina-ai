@@ -42,7 +42,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-24">
+    <section className="py-24" id="features">
       <Container>
         <h2 className="text-5xl w-fit max-w-3xl font-bold text-white   mx-auto text-center">
           Everything You Need to Learn, Build & Debug Faster

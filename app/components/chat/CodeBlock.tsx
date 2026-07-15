@@ -21,12 +21,15 @@ export default function CodeBlock({ language, code }: CodeBlockProps) {
       setCopied(false);
     }, 2000);
   }
+
   return (
     <div>
       <div className="flex justify-between items-center bg-zinc-700 px-4 py-2 rounded-t-lg">
         <span>{language}</span>
 
-        <button onClick={handleCopy}>{copied ? "✅ Copied!" : "📋 Copy"}</button>
+        <button onClick={handleCopy}>
+          {copied ? "✅ Copied!" : "📋 Copy"}
+        </button>
       </div>{" "}
       <SyntaxHighlighter style={oneDark} language={language}>
         {code}

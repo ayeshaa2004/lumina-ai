@@ -5,7 +5,10 @@ import TypingIndicator from "./TypingIndicator";
 
 export default function HeroPreview() {
   return (
-    <div className=" relative w-full max-w-4xl rounded-3xl border border-white/10 bg-zinc-900/80 p-6 shadow-2xl backdrop-blur-xl">
+    <div
+      id="works"
+      className=" relative w-full max-w-4xl rounded-3xl border border-white/10 bg-zinc-900/80 p-6 shadow-2xl backdrop-blur-xl"
+    >
       <PreviewHeader />
 
       <div className="space-y-6 pt-6">

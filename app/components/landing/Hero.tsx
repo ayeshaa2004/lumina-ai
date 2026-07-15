@@ -1,6 +1,8 @@
 import Container from "../ui/Container";
 import Button from "../ui/Button";
 import HeroPreview from "./HeroPreview";
+import Link from "next/link";
+import { Show, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Hero() {
   return (
@@ -23,8 +25,20 @@ export default function Hero() {
             solutions.
           </p>
           <div className="mt-10 flex gap-4">
-            <Button>Start Learning Free</Button>
-            <Button variant="secondary">See How It Works</Button>
+            <Show when="signed-out">
+              <SignInButton mode="modal">
+                <Button variant="primary">Start Learning Free</Button>
+              </SignInButton>
+            </Show>
+
+            <Show when="signed-in">
+              <Link href="/chat">
+                <Button variant="primary">Start Learning Free</Button>
+              </Link>
+            </Show>
+            <a href="#works">
+              <Button variant="secondary">See How It Works</Button>
+            </a>
           </div>
           <div className="relative mt-16 flex justify-center">
             <div className="absolute inset-0 flex items-center justify-center">

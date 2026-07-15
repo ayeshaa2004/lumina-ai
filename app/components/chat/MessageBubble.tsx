@@ -19,11 +19,15 @@ export default function MessageBubble({ content, role }: MessageBubbleProps) {
         components={{
           code({ className, children }) {
             const match = /language-(\w+)/.exec(className || "");
+
+            if (match) {
+              return <CodeBlock code={String(children)} language={match[1]} />;
+            }
+
             return (
-              <CodeBlock
-                code={String(children).replace(/\n$/, "")}
-                language={match ? match[1] : "text"}
-              ></CodeBlock>
+              <code className="rounded bg-zinc-700 px-1 py-0.5 text-sm">
+                {children}
+              </code>
             );
           },
         }}

@@ -30,7 +30,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-24">
+    <section className="py-24" id="why-lumina">
       <Container>
         <h2 className="text-5xl w-fit max-w-3xl font-bold text-white   mx-auto text-center">
           Why Students Love Learning with Lumina AI{" "}

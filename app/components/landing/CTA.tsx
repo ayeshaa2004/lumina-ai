@@ -1,5 +1,8 @@
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import Link from "next/link";
+import { Show, SignInButton, UserButton } from "@clerk/nextjs";
+
 
 export default function CTA() {
   return (
@@ -15,10 +18,21 @@ export default function CTA() {
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-7 text-gray-400">
               Learn faster, build confidently, and debug smarter with Lumina AI.
             </p>
+            <Show when="signed-out">
+              <SignInButton mode="modal">
+                <Button className="mt-10" variant="primary">
+                  Start Learning Free
+                </Button>
+              </SignInButton>
+            </Show>
 
-            <Button className="mt-10" variant="primary">
-              Start Learning Now →{" "}
-            </Button>
+            <Show when="signed-in">
+              <Link href="/chat">
+                <Button className="mt-10" variant="primary">
+                  Start Learning Free
+                </Button>
+              </Link>
+            </Show>
           </div>{" "}
         </div>
       </Container>
