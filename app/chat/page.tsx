@@ -154,7 +154,7 @@ export default function ChatPage() {
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
-        <main className="relative flex flex-1 flex-col overflow-hidden">
+        <main className="relative flex h-full flex-1 flex-col overflow-hidden">
           <ChatHeader setIsSidebarOpen={setIsSidebarOpen} />
 
           <ChatMessages
