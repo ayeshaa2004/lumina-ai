@@ -10,19 +10,17 @@ import { typeText } from "../lib/typeText";
 
 export default function ChatPage() {
   const [isTyping, setIsTyping] = useState(false);
-const [chats, setChats] = useState<Chat[]>(() => {
-  if (typeof window === "undefined") {
-    return dummyChats;
-  }
+  const [chats, setChats] = useState<Chat[]>(() => {
+    if (typeof window === "undefined") {
+      return dummyChats;
+    }
 
-  const savedChats = localStorage.getItem("lumina-chats");
-  return savedChats ? JSON.parse(savedChats) : dummyChats;
-});
+    const savedChats = localStorage.getItem("lumina-chats");
+    return savedChats ? JSON.parse(savedChats) : dummyChats;
+  });
   const [currentChatId, setCurrentChatId] = useState(dummyChats[0].id);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const currentChat = chats.find((chat) => chat.id === currentChatId);
-
-  
 
   useEffect(() => {
     localStorage.setItem("lumina-chats", JSON.stringify(chats));
@@ -156,7 +154,7 @@ const [chats, setChats] = useState<Chat[]>(() => {
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
-        <main className="flex flex-1 flex-col">
+        <main className="relative flex flex-1 flex-col overflow-hidden">
           <ChatHeader setIsSidebarOpen={setIsSidebarOpen} />
 
           <ChatMessages

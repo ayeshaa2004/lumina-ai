@@ -18,8 +18,8 @@ export default function ChatInput({
     setInput("");
   }
   return (
-    <div className="border-t border-white/10 bg-black p-6">
-      <div className="mx-auto flex max-w-4xl items-center gap-4">
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-black/95 backdrop-blur">
+      <div className="mx-auto flex max-w-4xl items-center gap-4 p-4">
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}

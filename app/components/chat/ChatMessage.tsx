@@ -21,7 +21,7 @@ export default function ChatMessages({
   }, [messages]);
 
   return (
-    <div className="flex-1 overflow-y-auto p-8">
+    <div className="flex-1 overflow-y-auto p-4 sm:p-8 pb-32">
       <div className="mx-auto flex max-w-4xl flex-col gap-6">
         {messages.map((message, index) => (
           <MessageBubble
