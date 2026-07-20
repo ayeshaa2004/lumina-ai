@@ -14,7 +14,7 @@ export default function Navbar() {
       <Container>
         {isMenuOpen && (
           <div
-            className="fixed inset-0 z-40 bg-black/900 lg:hidden"
+            className="fixed inset-0 z-[90] bg-black/900 lg:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
         )}
@@ -28,7 +28,7 @@ export default function Navbar() {
     bg-zinc-900
     border-l
     border-white/10
-    z-50
+    z-[100]
     transform
     transition-transform
     duration-300
@@ -42,6 +42,7 @@ export default function Navbar() {
           <div className="flex flex-col p-6 space-y-6">
             <a
               href="#features"
+              onClick={() => setIsMenuOpen(false)}
               className="text-lg text-gray-300 hover:text-white"
             >
               Features
@@ -49,12 +50,17 @@ export default function Navbar() {
 
             <a
               href="#why-lumina"
+              onClick={() => setIsMenuOpen(false)}
               className="text-lg text-gray-300 hover:text-white"
             >
               Why Lumina
             </a>
 
-            <a href="#faq" className="text-lg text-gray-300 hover:text-white">
+            <a
+              href="#faq"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-lg text-gray-300 hover:text-white"
+            >
               FAQs
             </a>
           </div>
