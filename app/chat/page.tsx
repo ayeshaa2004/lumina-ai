@@ -146,6 +146,13 @@ export default function ChatPage() {
   return (
     <div>
       <div className="flex h-screen bg-black">
+        {isSidebarOpen && (
+          <div
+            className="fixed inset-0 z-40 bg-black/60 lg:hidden"
+            onClick={() => setIsSidebarOpen(false)}
+          />
+        )}
+
         <Sidebar
           chats={chats}
           currentChatId={currentChatId}
