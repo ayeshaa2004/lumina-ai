@@ -6,9 +6,9 @@ import { Show, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Hero() {
   return (
-    <section className="py-24">
+    <section className="  py-24">
       <Container>
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center ">
           <div className="mb-6 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700">
             ✨ AI-Powered Learning Platform
           </div>
