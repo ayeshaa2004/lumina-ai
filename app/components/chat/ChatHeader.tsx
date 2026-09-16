@@ -7,6 +7,7 @@ export default function ChatHeader({ setIsSidebarOpen }: ChatHeaderProps) {
     <header className="flex items-center justify-between border-b border-white/10 bg-black px-8 py-5">
       <div className="flex gap-6">
         <button
+          aria-label="Open sidebar"
           className="block lg:hidden cursor-pointer
           "
           onClick={() => setIsSidebarOpen(true)}

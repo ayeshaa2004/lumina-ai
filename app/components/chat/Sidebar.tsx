@@ -50,6 +50,7 @@ z-50
             </div>
             <div>
               <button
+               aria-label="Close sidebar"
                 className="block lg:hidden absolute right-5 top-5 cursor-pointer"
                 onClick={() => setIsSidebarOpen(false)}
               >
